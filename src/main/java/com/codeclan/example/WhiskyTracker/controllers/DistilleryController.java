@@ -28,4 +28,9 @@ public class DistilleryController {
         return new ResponseEntity<>(distilleryRepository.findDistilleriesByRegion(region), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/distilleries/whiskies/{age}")
+    public ResponseEntity<List<Distillery>> getDistilleriesByAgeGreaterThan(@PathVariable int age) {
+        return new ResponseEntity<>(distilleryRepository.findDistilleriesByWhiskiesAgeGreaterThan(age), HttpStatus.OK);
+    }
+
 }
