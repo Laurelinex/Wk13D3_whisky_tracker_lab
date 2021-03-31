@@ -29,10 +29,10 @@ public class WhiskyController {
         return new ResponseEntity<>(whiskyRepository.findWhiskiesByYear(year), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/whiskies/distilleries/{id}")
-    public ResponseEntity<List<Whisky>> getWhiskiesByDistilleryId(@PathVariable Long id){
-        return new ResponseEntity<>(whiskyRepository.findWhiskiesByDistilleryId(id), HttpStatus.OK);
-    }
+//    @GetMapping(value = "/whiskies/distilleries/{id}")
+//    public ResponseEntity<List<Whisky>> getWhiskiesByDistilleryId(@PathVariable Long id){
+//        return new ResponseEntity<>(whiskyRepository.findWhiskiesByDistilleryId(id), HttpStatus.OK);
+//    }
 
 
     @GetMapping(value = "/whiskies/distilleries/{id}/{age}")
